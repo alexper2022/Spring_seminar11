@@ -1,0 +1,12 @@
+server:
+  port: 8180
+spring:
+  datasource:
+    url: jdbc:h2:mem:test
+    username: sa
+    password:
+    driverClassName: org.h2.Driver
+  jpa:
+    show-sql: false
+    hibernate:
+      ddl-auto: validate

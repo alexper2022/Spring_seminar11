@@ -1,0 +1,26 @@
+server:
+  port: 8080
+  error:
+    include-message: ALWAYS
+spring:
+  datasource:
+    url: jdbc:h2:file:./src/main/resources/DB/biblio
+    username: sa
+    password: password
+    driverClassName: org.h2.Driver
+  jpa:
+    show-sql: false
+    hibernate:
+      ddl-auto: validate
+  h2:
+    console.enabled: true
+  application:
+    name: homework5
+management:
+  endpoint:
+    env:
+      show-values: ALWAYS
+  endpoints:
+    web:
+      exposure:
+        include: env, prometheus, health, info, metrics
